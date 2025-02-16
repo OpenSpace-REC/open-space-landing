@@ -28,7 +28,6 @@ const Navbar = () => {
           </h1>
         </div>
 
-        {/* Hamburger Menu Button */}
         <button 
           className="hidden max-mobile:block text-white"
           onClick={toggleMenu}
@@ -44,7 +43,6 @@ const Navbar = () => {
           )}
         </button>
 
-        {/* Desktop Menu */}
         <div className="flex justify-center gap-12 text-lg items-center max-mobile:hidden">
           <NavLink href="#home">Home</NavLink>
           <NavLink href="#features">About</NavLink>
@@ -52,14 +50,18 @@ const Navbar = () => {
           <NavLink href="#community">Team</NavLink>
           <a
             href="https://tally.so/r/wMrgW8"
-            className="text-black font-medium px-5 py-2 rounded-lg bg-white hover:bg-transparent hover:text-white border border-white duration-200 whitespace-nowrap group relative overflow-hidden"
+            className="text-white font-medium hover:cursor-pointer hover:[text-shadow:_0_0_12px_#fff] duration-100"
           >
-            <span className="relative z-10">Project Support</span>
-            <div className="absolute inset-0 bg-black transform translate-y-full group-hover:translate-y-0 transition-transform duration-200"></div>
+            Project Support
+          </a>
+          <a
+            href="https://open-space.xyz/google-signin"
+            className="text-white font-medium hover:cursor-pointer hover:[text-shadow:_0_0_12px_#fff] duration-100"
+          >
+            Sign In
           </a>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="hidden max-mobile:block fixed top-[73px] left-0 right-0 bg-black backdrop-blur-xl border-b border-[#ffffff15] z-[90]">
             <nav className="flex flex-col items-center py-6 gap-6">
@@ -69,11 +71,17 @@ const Navbar = () => {
               <NavLink href="#community" onClick={toggleMenu}>Team</NavLink>
               <a
                 href="https://tally.so/r/wMrgW8"
-                className="text-black font-medium px-5 py-2 rounded-lg bg-white hover:bg-transparent hover:text-white border border-white duration-200 whitespace-nowrap group relative overflow-hidden"
+                className="text-white font-medium hover:cursor-pointer hover:[text-shadow:_0_0_12px_#fff] duration-100"
                 onClick={toggleMenu}
               >
-                <span className="relative z-10">Project Support</span>
-                <div className="absolute inset-0 bg-black transform translate-y-full group-hover:translate-y-0 transition-transform duration-200"></div>
+                Project Support
+              </a>
+              <a
+                href="https://open-space.xyz/google-signin"
+                className="text-white font-medium hover:cursor-pointer hover:[text-shadow:_0_0_12px_#fff] duration-100"
+                onClick={toggleMenu}
+              >
+                Sign In
               </a>
             </nav>
           </div>
