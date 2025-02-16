@@ -22,12 +22,20 @@ const DevelopmentNotice = () => {
       <div className={`text-white text-xl sm:text-2xl mt-6 sm:mt-8 z-[45] transition-opacity duration-1000 ${showPlatform ? 'opacity-100' : 'opacity-0'} text-center`}>
         The Platform is Under Development
       </div>
-      <button 
-        className={`mt-6 sm:mt-8 border border-white py-2 px-4 sm:px-6 rounded-full text-base sm:text-lg text-white hover:bg-white hover:text-black transition-all duration-1000 z-[45] ${showButton ? 'opacity-100' : 'opacity-0'}`}
-        onClick={() => window.scrollTo({top: window.innerHeight, behavior: 'smooth'})}
-      >
-        Know More
-      </button>
+      <div className={`flex gap-4 mt-6 sm:mt-8 z-[45] ${showButton ? 'opacity-100' : 'opacity-0'} transition-all duration-1000`}>
+        <button 
+          className="border border-white py-2 px-4 sm:px-6 rounded-full text-base sm:text-lg text-white hover:bg-white hover:text-black transition-all duration-300"
+          onClick={() => window.scrollTo({top: window.innerHeight, behavior: 'smooth'})}
+        >
+          Know More
+        </button>
+        <button 
+          className="border border-white py-2 px-4 sm:px-6 rounded-full text-base sm:text-lg text-white bg-white/10 hover:bg-white hover:text-black transition-all duration-300"
+          onClick={() => window.location.href = 'https://open-space.xyz/google-signin'}
+        >
+          Sign In (Closed Beta)
+        </button>
+      </div>
     </div>
   );
 };
